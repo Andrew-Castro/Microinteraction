@@ -35,7 +35,7 @@
     let btn = document.querySelector('button');
     let rule = CSSRulePlugin.getRule('button::before');
 
-    tl.to('.label', {opacity: 0, height: 0, position: 'absolute', duartion: '.1s'})
+    tl.to('.label', {opacity: 0, height: 0, position: 'absolute', duration: '.2s'})
       .to('button', {borderRadius: '50%', width: '2.5em', height: '2.5em', ease: Elastic.easeOut.config(.7, 0.3), duration: '1.2'}, '-=.5s')
       .to(rule, {borderRadius: '50%'}, '-=1s')
       .to('svg', {strokeDasharray: '90 103'}, '-=1')
@@ -47,7 +47,7 @@
     btn.addEventListener('click', () => {
         tl.play();
         btn.setAttribute('name', 'test');
-    });
+    })
 
 </script>
 </body>
